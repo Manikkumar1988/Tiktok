@@ -7,6 +7,9 @@ import android.widget.TextView
 import com.luseen.spacenavigation.SpaceItem
 import com.luseen.spacenavigation.SpaceNavigationView
 import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.luseen.spacenavigation.SpaceOnClickListener
 
 
@@ -30,11 +33,16 @@ class MainActivity : AppCompatActivity() {
 
         spaceNavigationView.setSpaceOnClickListener(object : SpaceOnClickListener {
             override fun onCentreButtonClick() {
-                Toast.makeText(this@MainActivity, "onCentreButtonClick", Toast.LENGTH_SHORT).show()
+
             }
 
             override fun onItemClick(itemIndex: Int, itemName: String) {
-                Toast.makeText(this@MainActivity, "$itemIndex $itemName", Toast.LENGTH_SHORT).show()
+                if(itemIndex == 1)
+                findNavController(R.id.my_nav_host_fragment).navigate(R.id.action_firstFragment_to_secondFragment)
+                else
+                {
+                    onBackPressed()
+                }
             }
 
             override fun onItemReselected(itemIndex: Int, itemName: String) {

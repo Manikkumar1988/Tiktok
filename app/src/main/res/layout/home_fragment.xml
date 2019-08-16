@@ -11,7 +11,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             xmlns:custom="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="75dp">
 
         <com.tomlonghurst.roundimageview.RoundImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
