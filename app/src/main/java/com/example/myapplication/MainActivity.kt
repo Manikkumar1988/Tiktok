@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       /* spaceNavigationView = findViewById(R.id.space) as SpaceNavigationView
+        spaceNavigationView = findViewById(R.id.space) as SpaceNavigationView
         spaceNavigationView.initWithSaveInstanceState(savedInstanceState)
         spaceNavigationView.addSpaceItem(SpaceItem("HOME", R.drawable.ic_home_black_24dp))
         spaceNavigationView.changeCenterButtonIcon(R.drawable.ic_launcher_foreground)
@@ -40,6 +40,6 @@ class MainActivity : AppCompatActivity() {
             override fun onItemReselected(itemIndex: Int, itemName: String) {
                 Toast.makeText(this@MainActivity, "$itemIndex $itemName", Toast.LENGTH_SHORT).show()
             }
-        })*/
+        })
     }
 }
